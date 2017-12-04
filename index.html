@@ -12,6 +12,8 @@
     <script type="text/javascript" src="assets/javascript/app.js"></script>
     <!-- link to jquery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- link to javascript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 
 <body>
@@ -20,6 +22,15 @@
   <button data-animal="giraffe">giraffe</button>
   <button data-animal="penguin">penguin</button>
   <button data-animal="polar bear">polar bear</button>
+<!-- new buttons will go here  -->
+    <div id="buttons-view"></div>
+    <form id="animal-form">
+        <label for="animal-input">Add an Animal</label>
+        <input type="text" id="animal-input">
+        <br>
+        <!-- Button triggers new  animal to be added -->
+        <input id="add-animal" type="submit" src=imageURL data-still=stillUrl data-animate=imageUrl data-state="animate" value="Add an animal" class="gif">
+    </form>
 
   <div id="gifs-appear-here">
   </div>
