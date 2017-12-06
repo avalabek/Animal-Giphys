@@ -5,15 +5,17 @@ $(document).ready(function() {
     var animals = [];
 
     // Event listener for all button elements
-    $("button").on("click", function() {
-// Question wrap the what happens on click in a function to call for new buttons?
+    // $("button").on("click", function() {
+      $(document).on("click", "button", function(){
+// Question wrap the what happens on click in a function to call for new buttons? Why doesn't this
+// work for new buttons created?
         // function displayAnimalGiphy() {
         var animal = $(this).attr("data-animal");
 
         // Constructing a URL to search Giphy for the name of the animal 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             animal + "&api_key=dc6zaTOxFJmzC&limit=10";
-        //TO DO make new buttons work with giphys--find out why they don't
+        //TO DO make new buttons work with giphys--find out why they don't something with array 
         // TO DO animate and still giphys make variables to hold url the below items mess up page
         // var imageUrl = response.data.image_original_url;
         // var stillUrl = imageURL.replace(/.gif/i, '_s.gif');
@@ -53,7 +55,7 @@ $(document).ready(function() {
                         animalImage.attr("data-still",results[i].images.fixed_height_small_still.url); 
                         //animated image give this attribute
                         animalImage.attr("data-animate",results[i].images.fixed_height_small.url); 
-                        animalImage.attr("data-state", "animate"); 
+                        animalImage.attr("data-state", "still"); 
                         animalImage.addClass("image");
 
                         // Appending the paragraph and animalImage we created to the "gifDiv" div we created
@@ -102,8 +104,9 @@ $(document).ready(function() {
     renderButtons();
 
 
-    // when .gif is clicked, then do this: incomplete 
-    $(document).click(".gif", function() {
+    // when .image is clicked, then do this: 
+    $(document).on("click",".image", function() {
+        console.log($(this));
         //variable to store image data-state in
         var state = $(this).attr("data-state");
 
@@ -119,9 +122,7 @@ $(document).ready(function() {
         // if variable is animated already
         if (state === "animate") {
             //then update the URL to be still
-            // by removing.gif and replacing it with_s.gif
             var updateURL = $(this).attr("data-still");
-            // $(this).attr("src", 'src.replace(/\.gif/i, "_s.gif"');
             $(this).attr("src", updateURL);
             $(this).attr("data-state", "still");
 
