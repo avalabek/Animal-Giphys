@@ -6,9 +6,9 @@ $(document).ready(function() {
 
     // Event listener for all button elements
     // $("button").on("click", function() {
-      $(document).on("click", "button", function(){
-// Question wrap the what happens on click in a function to call for new buttons? Why doesn't this
-// work for new buttons created?
+    $(document).on("click", "button", function() {
+        // Question wrap the what happens on click in a function to call for new buttons? Why doesn't this
+        // work for new buttons created?
         // function displayAnimalGiphy() {
         var animal = $(this).attr("data-animal");
 
@@ -52,10 +52,10 @@ $(document).ready(function() {
                         // result item found in console to make it still at first 
                         animalImage.attr("src", results[i].images.fixed_height_still.url);
                         // still image give this attribute
-                        animalImage.attr("data-still",results[i].images.fixed_height_small_still.url); 
+                        animalImage.attr("data-still", results[i].images.fixed_height_small_still.url);
                         //animated image give this attribute
-                        animalImage.attr("data-animate",results[i].images.fixed_height_small.url); 
-                        animalImage.attr("data-state", "still"); 
+                        animalImage.attr("data-animate", results[i].images.fixed_height_small.url);
+                        animalImage.attr("data-state", "still");
                         animalImage.addClass("image");
 
                         // Appending the paragraph and animalImage we created to the "gifDiv" div we created
@@ -97,7 +97,7 @@ $(document).ready(function() {
         renderButtons();
 
     });
-//Question add a click event listener to all elements with a class of "animal"
+    //Question add a click event listener to all elements with a class of "animal"
     // $(document).on("click", ".animal", displayAnimalGiphy());
 
     // call render buttons to display intitial buttons
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 
     // when .image is clicked, then do this: 
-    $(document).on("click",".image", function() {
+    $(document).on("click", ".image", function() {
         console.log($(this));
         //variable to store image data-state in
         var state = $(this).attr("data-state");
