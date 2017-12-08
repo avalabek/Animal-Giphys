@@ -12,9 +12,15 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- link to javascript -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- link to google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway|Work+Sans" rel="stylesheet">
+
 </head>
 
-<body>
+<body style="background-image:url('assets/images/wild_flowers.png')">
 <!-- Question something not right here, shouldn't these just be in the array to be made into buttons? but when I do that, the buttons no longer work, just like the new buttons I add don't work, so something with the array  -->
     <button data-animal="zebra">zebra</button>
     <button data-animal="hippo">hippo</button>
@@ -22,10 +28,13 @@
     <button data-animal="penguin">penguin</button>
     <button data-animal="polar bear">polar bear</button>
     <!-- new buttons will go here  -->
+   
+    
     <div id="buttons-view"></div>
+     <br><br><br>
     <form id="animal-form">
-        <label for="animal-input">Add an Animal</label>
-        <input type="text" id="animal-input">
+        <label for="animal-input"><input type="text" id="animal-input"></label>
+        
         <br>
         <!-- Button triggers new  animal to be added -->
         <!-- TO DO added buttons don't work  -->

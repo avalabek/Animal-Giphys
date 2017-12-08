@@ -1,25 +1,17 @@
 // jquery
 $(document).ready(function() {
 
-    // empty array of animals to be added to
+    
     var animals = [];
 
     // Event listener for all button elements
-    // $("button").on("click", function() {
-    $(document).on("click", "button", function() {
-        // Question wrap the what happens on click in a function to call for new buttons? Why doesn't this
-        // work for new buttons created?
-        // function displayAnimalGiphy() {
+        $(document).on("click", "button", function() {
         var animal = $(this).attr("data-animal");
 
         // Constructing a URL to search Giphy for the name of the animal 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             animal + "&api_key=dc6zaTOxFJmzC&limit=10";
-        //TO DO make new buttons work with giphys--find out why they don't something with array 
-        // TO DO animate and still giphys make variables to hold url the below items mess up page
-        // var imageUrl = response.data.image_original_url;
-        // var stillUrl = imageURL.replace(/.gif/i, '_s.gif');
-
+        
         // AJAX GET request
         $.ajax({
                 url: queryURL,
@@ -52,9 +44,9 @@ $(document).ready(function() {
                         // result item found in console to make it still at first 
                         animalImage.attr("src", results[i].images.fixed_height_still.url);
                         // still image give this attribute
-                        animalImage.attr("data-still", results[i].images.fixed_height_small_still.url);
+                        animalImage.attr("data-still", results[i].images.fixed_height_still.url);
                         //animated image give this attribute
-                        animalImage.attr("data-animate", results[i].images.fixed_height_small.url);
+                        animalImage.attr("data-animate", results[i].images.fixed_height.url);
                         animalImage.attr("data-state", "still");
                         animalImage.addClass("image");
 

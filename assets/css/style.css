@@ -1,3 +1,16 @@
 body {
-	background-color:#991b58;
+	
+text-align:center;
+font-family:'Raleway', sans-serif;;
 }
+
+#buttons-view {
+	display: inline-block;
+	margin: 4px;
+}
+#gifs-appear-here {
+	margin-left:100px;
+
+}
+
+
