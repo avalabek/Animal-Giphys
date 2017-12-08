@@ -1,17 +1,17 @@
 // jquery
 $(document).ready(function() {
 
-    
+
     var animals = [];
 
     // Event listener for all button elements
-        $(document).on("click", "button", function() {
+    $(document).on("click", "button", function() {
         var animal = $(this).attr("data-animal");
 
         // Constructing a URL to search Giphy for the name of the animal 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             animal + "&api_key=dc6zaTOxFJmzC&limit=10";
-        
+
         // AJAX GET request
         $.ajax({
                 url: queryURL,
@@ -60,7 +60,7 @@ $(document).ready(function() {
                 }
             });
     });
-    // }) 
+
     //function to make buttons from form input
     function renderButtons() {
         // delete animals before adding new ones
@@ -71,6 +71,7 @@ $(document).ready(function() {
             var a = $("<button>");
             // add class of animal to button 
             a.addClass("animal");
+            a.addClass("btn btn-success");
             // add data attribute of data-animal to button
             a.attr("data-animal", animals[i]);
             //button text
@@ -89,8 +90,6 @@ $(document).ready(function() {
         renderButtons();
 
     });
-    //Question add a click event listener to all elements with a class of "animal"
-    // $(document).on("click", ".animal", displayAnimalGiphy());
 
     // call render buttons to display intitial buttons
     renderButtons();

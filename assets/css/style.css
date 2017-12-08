@@ -1,16 +1,32 @@
 body {
 	
 text-align:center;
-font-family:'Raleway', sans-serif;;
+font-family:'Raleway', sans-serif;
 }
 
-#buttons-view {
+#buttons-view, button .data-animal {
 	display: inline-block;
-	margin: 4px;
+	padding-right: 40px;
+	font-family:'Raleway', sans-serif;
 }
 #gifs-appear-here {
-	margin-left:100px;
+	margin-right:40px;
+	padding-right:40px;
 
 }
+.panel-heading {
+	font-family: 'Raleway', sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	
 
-
+}
+.panel-body{
+font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	background-color:#4A96AD;
+	
+}
+#add-animal{
+	font-family:'Raleway', sans-serif;
+}

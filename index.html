@@ -17,34 +17,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- link to google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Raleway|Work+Sans" rel="stylesheet">
-
 </head>
 
 <body style="background-image:url('assets/images/wild_flowers.png')">
-<!-- Question something not right here, shouldn't these just be in the array to be made into buttons? but when I do that, the buttons no longer work, just like the new buttons I add don't work, so something with the array  -->
-    <button data-animal="zebra">zebra</button>
-    <button data-animal="hippo">hippo</button>
-    <button data-animal="giraffe">giraffe</button>
-    <button data-animal="penguin">penguin</button>
-    <button data-animal="polar bear">polar bear</button>
+        <div class="panel panel-default">
+        <div class="panel-heading">Animal Giphys</div>
+        <div class="panel-body">Click a button to see animal giphys! Then click the image to start or pause the giphy. Type in a new animal to create your own button.</div>
+    </div>
+    <button class="btn btn-success" data-animal="zebra" style="font-family:'Raleway', sans-serif;">zebra</button>
+    <button class="btn btn-success" data-animal="hippo" style="font-family:'Raleway', sans-serif;">hippo</button>
+    <button class="btn btn-success" data-animal="giraffe" style="font-family:'Raleway', sans-serif;">giraffe</button>
+    <button class="btn btn-success" data-animal="penguin" style="font-family:'Raleway', sans-serif;" style="font-family:'Raleway', sans-serif;">penguin</button>
+    <button class="btn btn-success" data-animal="polar bear" style="font-family:'Raleway', sans-serif;">polar bear</button>
     <!-- new buttons will go here  -->
-   
-    
     <div id="buttons-view"></div>
-     <br><br><br>
+    <br>
+    <br>
+    <br>
     <form id="animal-form">
-        <label for="animal-input"><input type="text" id="animal-input"></label>
-        
+        <label for="animal-input">
+            <input type="text" id="animal-input">
+        </label>
         <br>
         <!-- Button triggers new  animal to be added -->
-        <!-- TO DO added buttons don't work  -->
         <input id="add-animal" type="submit" value="Add an animal">
-        <!-- QUESTION there is a problem here.I don't know how it knows what imageURL is also the below does not work -->
-        <!-- <img src=imageURL data-still=imageURL data-animate=imageURL.replace(/"_s.gif"/".gif") data-state="animate" class="gif"> -->
     </form>
     <div id="gifs-appear-here">
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </body>
+</body>
 
 </html>
